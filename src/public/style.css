@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat";
+}
+
+body {
+  max-height: 100vh;
+  height: 100%;
+  background: url(./assets/win11.png) center top / cover;
+  display: flex;
+  justify-content: center;
+  padding-inline: 1rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.form {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  background-color: #ffffff21;
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: 0.4rem;
+}
+
+.input-area {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  gap: 0.6rem;
+  padding: 0 1rem;
+}
+
+.form input,
+button {
+  border-radius: 4px;
+  border: none;
+  height: 2.4rem;
+  width: 80%;
+  background-color: #e6e6e6;
+  text-indent: 5px;
+  outline: none;
+}
+
+#submit {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-indent: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #e6e6e6;
+  background-color: #1554dd;
+
+  &:hover {
+    filter: opacity(0.8);
+    transition: all 0.3s;
+  }
+}
+
+.icon {
+  display: grid;
+  justify-content: center;
+
+  & i {
+    font-size: 3rem;
+    color: #eaeaeace;
+  }
+}
+
+#response {
+  color: #e6e6e6;
+}
+
+.hidden-response {
+  display: none;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 80%;
+  max-height: 460px;
+  overflow-x: hidden;
+  background-color: #ffffff21;
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: 0 0 1rem 1rem;
+  text-align: center;
+  transition: height 0.2s;
+}
+
+.list::-webkit-scrollbar {
+  width: 0rem;
+}
+
+.list::-webkit-scrollbar-thumb {
+  border-radius: 0 0 999px 999px;
+}
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #1554dd;
+  padding: 1rem;
+  font-size: 1em;
+  color: #eaeaeace;
+}
+
+.list li,
+.avatar img {
+  border-radius: 1rem;
+}
+
+.avatar img {
+  width: 100px;
+}
+
+.avatar {
+  height: 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+
+  & p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 0.2rem;
+  }
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls-buttons {
+  width: 70px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1.4rem;
+
+  & i {
+    cursor: pointer;
+
+    &:hover {
+      transition: all 0.3s;
+      opacity: 0.8;
+    }
+  }
+}
+
+/* Estilização do filtro de desfoque */
+
+.swal2-popup {
+  backdrop-filter: blur(5px);
+  color: #e6e6e6;
+  border-radius: 10px;
+}
+
+.swal2-container {
+  color: #e6e6e6;
+}
+.swal2-timer-progress-bar-container {
+  background-color: #a5dd86;
+}
+
+.swal2-confirm,
+.swal2-cancel {
+  box-sizing: border-box;
+  display: grid !important;
+  place-content: center !important;
+  width: 150px !important;
+}
+
+.swal2-cancel {
+  width: fit-content !important;
+  background-color: #C72E2E !important;
+}
+
+.swal2-success-circular-line-left,
+.swal2-success-circular-line-right,
+.swal2-success-fix {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+#swal2-html-container {
+  display: flex !important;
+  flex-direction: column;
+  overflow: none;
+
+  & label {
+    align-self: flex-start;
+    padding-bottom: 0.5rem;
+    bottom: 0;
+  }
+}
+
+.swal2-input {
+  flex: 1 1 0;
+  background-color: #e6e6e628;
+  outline: none;
+  padding: 0.8rem 0.5rem !important;
+  border: 1px solid rgba(238, 238, 238, 0.301);
+  margin: 0;
+  margin-bottom: 1.2rem;
+}
+@media (max-width: 768px) {
+  .form {
+    padding: 1.9rem;
+  }
+
+  .input-area {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1rem;
+
+    & input {
+      flex: 1 120px;
+    }
+
+    & button {
+      flex: 1 30px;
+    }
+  }
+
+  .form,
+  .list {
+    width: 96%;
+  }
+
+  .controls p {
+    display: flex;
+    text-align: left;
+  }
+
+  .icon{
+    display: none;
+  }
+}

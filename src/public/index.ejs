@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include('./partials/head');%>
+
+    <body>
+
+        <main class="container">
+            <form class="form" id="form">
+                <div class="icon">
+                        <i class="ph-fill ph-github-logo"></i>
+                </div>
+                <div class="input-area">
+                    <input required placeholder="Digite seu nome" id="name" type="text">
+                    <input required placeholder="Digite a URL de sua foto" id="avatar" type="text" spellcheck="false">
+                    <input required placeholder="Digte sua idade" id="age" type="text">
+                    <button id="submit"> <i class="ph-bold ph-arrow-right"></i> </button>
+                </div>
+            </form>
+            <ul class="list" id="apiView">
+            </ul>
+        </main>
+
+
+
+        <script>
+            ScrollReveal({ reset: true });
+
+            ScrollReveal().reveal('.container', {
+                delay: 400,
+                duration: 500
+            })
+        </script>
+
+        <script src="./app/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js">
+        </script>
+    </body>
+
+</html>
